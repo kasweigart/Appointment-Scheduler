@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/QAM1_Java_Application_Development.iml" filepath="$PROJECT_DIR$/QAM1_Java_Application_Development.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Appointment-Scheduler.iml" filepath="$PROJECT_DIR$/Appointment-Scheduler.iml" />
     </modules>
   </component>
 </project>
