@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TotalAppointmentsController">
+   <children>
+      <MenuBar prefHeight="26.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem disable="true" mnemonicParsing="false" text="New Customer " />
+                  <MenuItem disable="true" mnemonicParsing="false" text="New Appointment" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit" />
+
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem disable="true" mnemonicParsing="false" text="Update Customer" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Update Appointment" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Delete Customer" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Delete Appointment" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="14.0" layoutY="33.0" text="Total Customer Appointments">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="545.0" layoutY="360.0" mnemonicParsing="false" onAction="#onBack" text="Back" />
+      <Label layoutX="320.0" layoutY="97.0" text="By Month">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="97.0" text="By Type">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="byTypeListView" layoutX="76.0" layoutY="117.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="byMonthListView" layoutX="320.0" layoutY="117.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

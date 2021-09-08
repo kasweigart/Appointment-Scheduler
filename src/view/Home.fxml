@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <MenuBar prefHeight="26.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="newCustomerMenuItem" mnemonicParsing="false" onAction="#toAddCustomer" text="New Customer" />
+                  <MenuItem mnemonicParsing="false" onAction="#toAddAppointment" text="New Appointment" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#toUpdateCustomer" text="Update Customer" />
+                  <MenuItem mnemonicParsing="false" onAction="#toUpdateAppointment" text="Update Appointment" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onDeleteCustomer" text="Delete Customer" />
+                  <MenuItem mnemonicParsing="false" onAction="#onDeleteAppointment" text="Delete Appointment" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="View">
+               <items>
+                  <MenuItem fx:id="reportsMenuItem" mnemonicParsing="false" onAction="#onApptsReportMenuItem" text="Appointments Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#onContactScheduleMenuItem" text="Contact Schedule" />
+                  <MenuItem mnemonicParsing="false" onAction="#onCustomerLocationMenuItem" text="Customer Locations" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="customersTableView" layoutX="25.0" layoutY="112.0" prefHeight="175.0" prefWidth="750.0">
+        <columns>
+          <TableColumn fx:id="customerIDColumn" prefWidth="61.4000244140625" text="Cust. ID" />
+          <TableColumn fx:id="customerNameColumn" prefWidth="83.39999389648438" text="Name" />
+            <TableColumn fx:id="customerAddressColumn" prefWidth="203.39999389648438" text="Address" />
+            <TableColumn fx:id="custFirstLevelDivisionColumn" prefWidth="114.20001220703125" text="State/Province" />
+            <TableColumn fx:id="customerPostalCodeColumn" minWidth="0.0" prefWidth="106.39996337890625" text="Postal Code" />
+            <TableColumn fx:id="customerPhoneNumberColumn" minWidth="0.0" prefWidth="184.5999755859375" text="Phone Number" />
+        </columns>
+      </TableView>
+      <TableView fx:id="appointmentsTableView" layoutX="25.0" layoutY="338.0" prefHeight="175.0" prefWidth="750.0">
+         <columns>
+            <TableColumn fx:id="apptIDColumn" prefWidth="61.19997787475586" text="Appt. ID" />
+            <TableColumn fx:id="apptTitleColumn" prefWidth="61.5999755859375" text="Title" />
+            <TableColumn fx:id="apptDescColumn" prefWidth="103.20001220703125" text="Description" />
+            <TableColumn fx:id="apptLocationColumn" prefWidth="64.60000610351562" text="Location" />
+            <TableColumn fx:id="apptContactColumn" prefWidth="123.39996337890625" text="Contact" />
+            <TableColumn fx:id="apptTypeColumn" prefWidth="49.0" text="Type" />
+            <TableColumn fx:id="apptStartDateTimeColumn" prefWidth="113.4000244140625" text="Start Date/Time" />
+            <TableColumn fx:id="apptEndDateTimeColumn" prefWidth="108.0" text="End Date/Time" />
+            <TableColumn fx:id="apptCustomerIDColumn" prefWidth="70.39996337890625" text="Cust. ID" />
+         </columns>
+      </TableView>
+      <Label fx:id="customersLabel" layoutX="25.0" layoutY="86.0" text="Customers">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="312.0" text="Appointments">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="welcomeMessage" layoutX="25.0" layoutY="47.0" text="Welcome, User">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="upcomingAppointmentLabel" layoutX="311.0" layoutY="52.0" text="No upcoming appointments.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="monthRadioButton" layoutX="693.0" layoutY="316.0" mnemonicParsing="false" onAction="#onMonthRadioButton" text="This Month">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="weekRadioButton" layoutX="609.0" layoutY="316.0" mnemonicParsing="false" onAction="#onWeekRadioButton" text="This Week" toggleGroup="$toggleGroup" />
+      <Label layoutX="516.0" layoutY="316.0" text="Sort By:" />
+      <RadioButton fx:id="allRadioButton" layoutX="565.0" layoutY="316.0" mnemonicParsing="false" onAction="#onAllRadioButton" selected="true" text="All" toggleGroup="$toggleGroup" />
+   </children>
+</AnchorPane>

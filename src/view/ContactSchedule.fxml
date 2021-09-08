@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ContactScheduleController">
+   <children>
+      <MenuBar prefHeight="26.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem disable="true" mnemonicParsing="false" text="New Customer " />
+                  <MenuItem disable="true" mnemonicParsing="false" text="New Appointment" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit" />
+
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem disable="true" mnemonicParsing="false" text="Update Customer" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Update Appointment" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Delete Customer" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Delete Appointment" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="14.0" layoutY="33.0" text="Contact Schedule">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+       <TableView fx:id="appointmentsTableView" layoutX="25.0" layoutY="91.0" prefHeight="252.0" prefWidth="550.0">
+           <columns>
+               <TableColumn fx:id="apptIDColumn" prefWidth="61.19997787475586" text="Appt. ID" />
+               <TableColumn fx:id="apptTitleColumn" prefWidth="61.5999755859375" text="Title" />
+               <TableColumn fx:id="apptTypeColumn" prefWidth="49.0" text="Type" />
+               <TableColumn fx:id="apptDescColumn" prefWidth="132.8000030517578" text="Description" />
+               <TableColumn fx:id="apptStartDateTimeColumn" prefWidth="97.5999755859375" text="Start Date/Time" />
+               <TableColumn fx:id="apptEndDateTimeColumn" prefWidth="91.5999755859375" text="End Date/Time" />
+            <TableColumn fx:id="apptCustomerIDColumn" prefWidth="55.60003662109375" text="Cust. ID" />
+           </columns>
+       </TableView>
+      <Button layoutX="545.0" layoutY="360.0" mnemonicParsing="false" onAction="#onBack" text="Back" />
+      <ComboBox fx:id="contactComboBox" layoutX="424.0" layoutY="46.0" onAction="#onSelectContact" prefWidth="150.0" promptText="Select" />
+      <Label layoutX="372.0" layoutY="50.0" text="Contact" />
+   </children>
+</AnchorPane>
